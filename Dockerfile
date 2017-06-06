@@ -13,6 +13,7 @@ RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selectio
 RUN echo "deb http://research.cs.wisc.edu/htcondor/debian/stable jessie contrib" > /etc/apt/sources.list.d/condor.list
 RUN echo "deb http://software.ligo.org/gridtools/debian jessie main" > /etc/apt/sources.list.d/gridtools.list
 RUN echo "deb http://software.ligo.org/lscsoft/debian jessie contrib" > /etc/apt/sources.list.d/lscsoft.list
+RUN echo "deb http://software.ligo.org/lscsoft/debian jessie-proposed contrib" > /etc/apt/sources.list.d/lscsoft-proposed.list
 
 # add LIGO and HTCondor signing keys
 RUN apt-key adv --keyserver pgp.mit.edu --recv-key 8325FECB83821E31D3582A69CE050D236DB6FA3F
