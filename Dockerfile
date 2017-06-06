@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install --assume-yes apt-utils gnupg && \
 #RUN echo "deb http://research.cs.wisc.edu/htcondor/debian/stable stretch contrib" > /etc/apt/sources.list.d/condor.list
 RUN echo "deb http://software.ligo.org/gridtools/debian stretch main" > /etc/apt/sources.list.d/gridtools.list
 RUN echo "deb http://software.ligo.org/lscsoft/debian stretch contrib" > /etc/apt/sources.list.d/lscsoft.list
+RUN echo "deb http://software.ligo.org/lscsoft/debian stretch-proposed contrib" > /etc/apt/sources.list.d/lscsoft-proposed.list
 
 # add LIGO and HTCondor signing keys
 RUN apt-key adv --keyserver pgp.mit.edu --recv-key 8325FECB83821E31D3582A69CE050D236DB6FA3F
